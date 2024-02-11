@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+}
+
+#previous {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 169.3px;
+  animation: hideLoader 5s forwards;
+}
+
+@keyframes hideLoader {
+  to {
+    display: none;
+  }
+}
+
+#content {
+  margin: 0;
+  background-image: url('./Assets/download1.png');
+  background-size: cover;
+  /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+  background-position: center;
+  /* Canh chỉnh vị trí hình ảnh */
+  background-repeat: no-repeat;
+  /* Ngăn chặn lặp lại hình ảnh nền */
+  height: 100vh;
+  /* 100% chiều cao của viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: none;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Previous */
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+
+  0%,
+  10% {
+    width: 0;
+  }
+
+  45%,
+  55% {
+    width: 6.2em;
+  }
+
+  /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 12em;
+  margin: 100px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green;
+  /* Cursor */
+  animation: typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
+
+.container {
+  height: 350px;
+  width: 350px;
+  background-color: aqua;
+  position: relative;
+  top: 2%;
+  left: 34%;
+  box-shadow: aquamarine;
+  opacity: 0.5;
+  border-radius: 10%;
+}
+
+.content_container {
+  position: absolute;
+  left: 41%;
+  top: 5%;
+}
+
+.image>img {
+  border-radius: 50%;
+  height: 100px;
+  /* width: 100px; */
+  margin-bottom: 60px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.facebook {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+  box-shadow: 1px 1px 0px #eeb1de, 2px 2px 0px #d365b6, 3px 3px 0px #d365b6,
+    4px 4px 0px #d365b6, 5px 5px 0px #d365b6;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+  box-shadow: 1px 1px 0px #a1defa, 2px 2px 0px #41bef8, 3px 3px 0px #41bef8,
+    4px 4px 0px #41bef8, 5px 5px 0px #41bef8;
+}
+
+.card2:hover .facebook {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+  box-shadow: 1px 1px 0px rgb(124, 123, 123), 2px 2px 0px #333, 3px 3px 0px #333,
+    4px 4px 0px #333, 5px 5px 0px #333;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+  box-shadow: 1px 1px 0px #bdc2e2, 2px 2px 0px #9ca6e0, 3px 3px 0px #9ca6e0,
+    4px 4px 0px #9ca6e0, 5px 5px 0px #9ca6e0;
+}
+
+.card4:hover .discord {
+  fill: white;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  box-shadow: 1px 1px 0px rgb(179, 175, 175), 2px 2px 0px rgb(179, 175, 175),
+    3px 3px 0px rgb(179, 175, 175), 4px 4px 0px rgb(179, 175, 175),
+    5px 5px 0px rgb(179, 175, 175);
+}
+
+
+
+/* spinner */
+.spinner {
+  width: 3em;
+  height: 3em;
+  cursor: not-allowed;
+  border-radius: 50%;
+  border: 2px solid #444;
+  box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
+  animation: rot55 0.7s linear infinite;
+  position: relative;
+  right: 0%;
+  left: 90%;
+}
+
+.spinnerin {
+  border: 2px solid #444;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rot55 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#caption {
+  position: relative;
+  top: 20%;
+  margin: 10px 30% 10px 30%;
+}
+
+/* Mobile: Width < 740px */
+@media only screen and (min-width: 381px) and (max-width: 46.1875em) {
+  #previous{
+    height: 950px;
+    width: auto;
+  }
+  .image > img {
+    height: 150px;
+    margin-bottom: 65%;
+  }
+  #caption{
+    top: 23%;
+    margin: 10px 20% 10px 20%;
+    font-size: small;
+  }
+  .content_container{
+    left: 25%;
+  }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  #previous{
+    height: 1200px;
+  }
+  .image > img {
+    height: 250px;
+    margin-bottom: 70%;
+  }
+  #caption{
+    top: 28%;
+    font-size: larger;
+    margin: 10px 30% 10px 25%;
+  }
+  .content_container{
+    left: 35%;
+  }
+}
+
+/* Mobile: Width < 380px */
+@media only screen and (max-width: 380px) {
+  #previous{
+    height: 700px;
+    width: auto;
+  }
+  .image > img {
+    height: 120px;
+    margin-bottom: 25%;
+  }
+  #caption{
+    top: 20%;
+    margin: 10px 20% 10px 20%;
+    font-size: xx-small;
+  }
+  .content_container{
+    left: 20%;
+  }
+}
